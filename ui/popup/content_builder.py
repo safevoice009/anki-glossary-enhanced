@@ -59,17 +59,97 @@ def load_fonts_css() -> str:
 
 
 SECTIONS = [
-    ("definition", "📚", "Definition"),
+    ("definition", "📖", "Definition"),
     ("why_it_matters", "💡", "Why It Matters"),
-    ("how_youll_see_it", "👁️", "How You'll See It"),
+    ("how_youll_see_it", "🩺", "How You'll See It"),
+    ("problem_solving", "🧩", "Problem Solving"),
+    ("differentials", "🔀", "Differentials"),
     ("tricks", "🧠", "Tricks & Mnemonics"),
+    ("red_flags", "🚨", "Red Flags"),
+    ("algorithm", "📋", "Algorithm"),
+    ("treatment", "💊", "Treatment"),
+    ("exam_appearance", "📝", "Exam Appearance"),
+    ("cases", "🏥", "Cases"),
+    ("images", "🖼️", "Images"),
 ]
 
-COLLAPSED_BY_DEFAULT = []
+
+def build_images_html(images: list, title: str) -> str:
+    """Build HTML for 🖼️ Clinical & Pathological Atlas section."""
+    if not images:
+        return ""
+    
+    img_cards = ""
+    for idx, img_url in enumerate(images, 1):
+        img_cards += f'''
+        <div class="ems-atlas-card" onclick="window.open('{img_url}', '_blank')">
+            <img src="{img_url}" alt="{title} Slide {idx}" class="ems-atlas-img" loading="lazy">
+            <div class="ems-atlas-label">🔍 Slide {idx} (Click to Expand)</div>
+        </div>
+        '''
+        
+    return f'''
+    <section class="ems-section ems-section-images" data-section-key="images">
+        <div class="ems-section-header" onclick="toggleSection('images')">
+            <div class="ems-section-title-wrap">
+                <span class="ems-section-icon">🖼️</span>
+                <h2 class="ems-section-title">Clinical &amp; Pathological Atlas</h2>
+            </div>
+            <span class="ems-accordion-toggle">▼</span>
+        </div>
+        <div class="ems-section-body">
+            <div class="ems-atlas-gallery" style="display: flex; gap: 10px; overflow-x: auto; padding: 8px 0;">
+                {img_cards}
+            </div>
+        </div>
+    </section>
+    '''
+
+
+def build_footer_html(see_also: list, prerequisites: list, index) -> str:
+    """Build footer with related terms links & author attribution badge."""
+    links_html = ""
+    
+    all_related = []
+    if see_also:
+        all_related.extend([(tid, "related") for tid in see_also])
+    if prerequisites:
+        all_related.extend([(tid, "prereq") for tid in prerequisites])
+        
+    for term_id, rel_type in all_related:
+        term = index.get_term(term_id)
+        if term:
+            name = term.get("names", [term_id])[0]
+            icon = "📋" if rel_type == "prereq" else "🔍"
+            title = f"Prerequisite: {name}" if rel_type == "prereq" else name
+            links_html += f'''
+            <button class="ems-related-chip" onclick="navigateToTerm('{term_id}')" title="{title}">
+                <span class="ems-chip-icon">{icon}</span>
+                <span class="ems-chip-label">{name}</span>
+            </button>
+            '''
+            
+    related_block = f'''
+    <div class="ems-related-title">Related Concepts</div>
+    <div class="ems-related-chips">{links_html}</div>
+    ''' if links_html else ""
+
+    author_badge = '''
+    <div class="ems-author-badge" style="margin-top: 15px; padding: 8px 12px; background: rgba(108, 92, 231, 0.1); border: 1.5px solid #6C5CE7; border-radius: 8px; font-size: 11px; font-weight: 700; color: #6C5CE7; text-align: center;">
+        ⚡ Enhanced Engine by <a href="https://github.com/safevoice009" target="_blank" style="color: #6C5CE7; text-decoration: underline; font-weight: 800;">safevoice009</a> • Open Source Medical Engine
+    </div>
+    '''
+        
+    return f'''
+    <footer class="ems-popup-footer">
+        {related_block}
+        {author_badge}
+    </footer>
+    '''
 
 
 def build_popup_html(term_data: dict, dark_mode: bool = False) -> str:
-    """Build HTML for the popup window from term data."""
+    """Build complete popup HTML from term data."""
     level = term_data.get("level", "medschool")
     return build_medschool_popup_html(term_data, dark_mode)
 
@@ -141,116 +221,6 @@ def build_section_html(key: str, icon: str, title: str, content, term_id: str, c
     '''
 
 
-def build_sources_html(sources: list) -> str:
-    """Build HTML for sources section."""
-    if not sources:
-        return ""
-    
-    items = ""
-    for s in sources:
-        if isinstance(s, dict):
-            name = s.get("name", "Source")
-            url = s.get("url", "#")
-            items += f'<li><a href="{url}" target="_blank" rel="noopener">{name}</a></li>'
-        else:
-            items += f'<li>{s}</li>'
-            
-    return f'''
-    <section class="ems-section ems-section-sources collapsed" data-section-key="sources">
-        <div class="ems-section-header" onclick="toggleSection('sources')">
-            <div class="ems-section-title-wrap">
-                <span class="ems-section-icon">🔗</span>
-                <h2 class="ems-section-title">Sources</h2>
-            </div>
-            <span class="ems-accordion-toggle">▼</span>
-        </div>
-        <div class="ems-section-body">
-            <ul class="ems-sources-list">{items}</ul>
-        </div>
-    </section>
-    '''
-
-
-def build_credits_html(credits: list) -> str:
-    """Build HTML for credits section."""
-    if not credits:
-        return ""
-    
-    items = "".join([f'<li>{c}</li>' for c in credits])
-    return f'''
-    <section class="ems-section ems-section-credits collapsed" data-section-key="credits">
-        <div class="ems-section-header" onclick="toggleSection('credits')">
-            <div class="ems-section-title-wrap">
-                <span class="ems-section-icon">🙏</span>
-                <h2 class="ems-section-title">Credits</h2>
-            </div>
-            <span class="ems-accordion-toggle">▼</span>
-        </div>
-        <div class="ems-section-body">
-            <ul class="ems-credits-list">{items}</ul>
-        </div>
-    </section>
-    '''
-
-
-def build_part_of_html(see_also: list, index) -> str:
-    """Build HTML for part_of parent term banner."""
-    if not see_also:
-        return ""
-    
-    for term_id in see_also:
-        term = index.get_term(term_id)
-        if term:
-            name = term.get("names", [term_id])[0]
-            return f'''
-            <div class="ems-part-of-banner" onclick="navigateToTerm('{term_id}')">
-                <span class="ems-part-of-label">Part of</span>
-                <span class="ems-part-of-name">{name}</span>
-                <span class="ems-part-of-arrow">→</span>
-            </div>
-            '''
-    return ""
-
-
-def build_footer_html(see_also: list, prerequisites: list, index) -> str:
-    """Build footer with related terms links."""
-    links_html = ""
-    
-    all_related = []
-    if see_also:
-        all_related.extend([(tid, "related") for tid in see_also])
-    if prerequisites:
-        all_related.extend([(tid, "prereq") for tid in prerequisites])
-        
-    if not all_related:
-        return ""
-        
-    for term_id, rel_type in all_related:
-        term = index.get_term(term_id)
-        if term:
-            name = term.get("names", [term_id])[0]
-            icon = "📋" if rel_type == "prereq" else "🔍"
-            title = f"Prerequisite: {name}" if rel_type == "prereq" else name
-            links_html += f'''
-            <button class="ems-related-chip" onclick="navigateToTerm('{term_id}')" title="{title}">
-                <span class="ems-chip-icon">{icon}</span>
-                <span class="ems-chip-label">{name}</span>
-            </button>
-            '''
-            
-    if not links_html:
-        return ""
-        
-    return f'''
-    <footer class="ems-popup-footer">
-        <div class="ems-related-title">Related Concepts</div>
-        <div class="ems-related-chips">
-            {links_html}
-        </div>
-    </footer>
-    '''
-
-
 def build_medschool_popup_html(term_data: dict, dark_mode: bool = False) -> str:
     """Build popup HTML for medical school level terms (full features)."""
     term_id = term_data.get("id", "")
@@ -284,6 +254,11 @@ def build_medschool_popup_html(term_data: dict, dark_mode: bool = False) -> str:
     # Build "Part of" banner for nested term navigation
     part_of_html = build_part_of_html(see_also, index)
     
+    # Build Clinical Atlas Images Section
+    images = term_data.get("images", [])
+    if images:
+        sections_html += build_images_html(images, names[0])
+
     # Build sources/credits
     sources = term_data.get("sources", [])
     credits = term_data.get("credits", [])
