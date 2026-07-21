@@ -56,6 +56,20 @@ flowchart TD
 
 ---
 
+## 🛠️ Usage Methods
+
+### ⚡ Method 1: Universal Double-Click (Primary & Fastest)
+1. Open any deck and start reviewing.
+2. **Double-click ANY medical word, drug, or symptom** directly on your card screen.
+3. The EnterMedSchool Glossary window opens instantly with full definitions, clinical mechanisms, and high-yield exam traps!
+
+### 🔍 Method 2: Highlight & Search Menu (Second Best & Manual Lookup)
+1. Highlight any word or phrase on your card screen.
+2. Right-click (or open context menu) and select **"Search in EMS Glossary"**.
+3. If the word is not in the local database, click **`🌐 Search online definition for '<query>'`** at the top of the search results to pull up live online results!
+
+---
+
 ## 🎨 Chunky EnterMedSchool Aesthetic Features
 
 * **🌈 Official EnterMedSchool Chunky Theme**: Chunky black borders (`3px solid #1a1a2e`), drop shadows (`4px 4px 0 #1a1a2e`), and vibrant gradients matching `https://www.entermedschool.com/`.
