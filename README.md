@@ -1,18 +1,19 @@
-# EnterMedSchool Glossary - Enhanced Edition 🩺⚡
+# Medical Terms Glossary & Instant Dictionary (EnterMedSchool Enhanced) 🩺⚡
 
 An upgraded, high-yield open-source medical glossary add-on for **Anki Desktop**.
 
-Designed specifically for medical students and graduates preparing for USMLE, PLAB, UPSC CMS, and medical board exams.
+Designed specifically for medical students and doctors preparing for USMLE, PLAB, UPSC CMS, and medical board exams.
 
 ---
 
-## 🙏 Credits & Open-Source Acknowledgments
+## 🙏 Credits, APIs & Open-Source Acknowledgments
 
-> **Credits & Open-Source Notice**
+> **Credits, API & Open-Source Notice**
 > 
 > * **Original Concept & Base Code:** Created by **Ari Horesh** and the team at **[EnterMedSchool](https://entermedschool.com)** ([Original Repository](https://github.com/entermedschool/anki-glossary)).
-> * **About This Enhanced Version:** This is an independent, community-created open-source upgrade developed by **safevoice009** (`unboundapex1@gmail.com`) to add live Wikipedia Medical API lookup, universal double-click functionality, dynamic exam trap extraction, and movable window capabilities.
-> * **License:** Open Source (GPL-3.0). All credits for the original base add-on belong to EnterMedSchool.
+> * **Live Online Dictionary Data & API:** Powered by the open-access **[Wikimedia REST API](https://en.wikipedia.org/api/rest_v1/)** provided by the **Wikimedia Foundation** and Wikipedia contributors worldwide.
+> * **Integration & Enhanced Configuration:** Configured and maintained by **[safevoice009](https://github.com/safevoice009)** (`unboundapex1@gmail.com`) to integrate live Wikipedia API queries, universal double-click lookup, high-yield exam trap extraction, and movable window capabilities.
+> * **License:** Open Source (GPL-3.0). All credits for the base add-on belong to EnterMedSchool and for data to Wikimedia Foundation.
 
 ---
 
@@ -40,4 +41,5 @@ Designed specifically for medical students and graduates preparing for USMLE, PL
 This project is licensed under the open-source **GPL-3.0 License**, in compliance with the original EnterMedSchool Glossary open-source repository.
 
 * **Original Project:** [EnterMedSchool Glossary on GitHub](https://github.com/entermedschool/anki-glossary)
+* **API Provider:** [Wikimedia REST API](https://en.wikipedia.org/api/rest_v1/)
 * **EnterMedSchool Website:** [entermedschool.com](https://entermedschool.com)
