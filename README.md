@@ -41,22 +41,11 @@
 
 ---
 
-## 🛠️ How To Use The 3 Major Features
+## 🛠️ Usage Guide Vector Card
 
-### ⚡ Feature 1: Universal Double-Click & Unlimited Live Dictionary
-1. Open any deck in Anki and start reviewing.
-2. **Double-click ANY medical word, drug, symptom, or syndrome** on your card.
-3. The popup opens instantly! If the term is not in the offline database, the **Wikimedia Medical REST API** fetches full definitions, clinical mechanisms, and board exam traps live over the internet!
-
-### 🔊 Feature 2: Free Instant Audio Pronunciation Engine
-1. Inside the popup window's toolbar, click the vibrant **`🔊 Audio`** button.
-2. Streams crystal-clear native medical English audio pronunciation.
-3. Uses 100% free open audio streams with an offline Web Speech API fallback (zero paid keys needed!).
-
-### 🖼️ Feature 3: Clinical & Pathological Atlas Gallery
-1. Scroll down to the **`🖼️ Clinical & Pathological Atlas`** section inside the popup window.
-2. Automatically pulls 3 high-resolution clinical photos, histology slides, radiology scans (CT/MRI/X-ray), or anatomical diagrams from Wikimedia Commons.
-3. Click any slide thumbnail to expand it in high resolution!
+<p align="center">
+  <img src="docs/usage_guide.svg" alt="How To Use The 3 Major Features Vector Card" width="100%">
+</p>
 
 ---
 
