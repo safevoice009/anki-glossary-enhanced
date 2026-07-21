@@ -45,16 +45,18 @@ class GlossaryPopup(QDialog):
         return cls._instance
     
     def __init__(self, parent=None):
-        super().__init__(parent)
+        super().__init__(parent if parent else mw)
         self.setWindowTitle("EnterMedSchool's Glossary")
-        # Movable window that stays on top of Anki review screen
+        # Parented Tool window: Minimizes automatically WITH Anki!
         self.setWindowFlags(
-            Qt.WindowType.Window |
+            Qt.WindowType.Tool |
             Qt.WindowType.WindowStaysOnTopHint
         )
         self.setAttribute(Qt.WidgetAttribute.WA_TranslucentBackground, False)
         
         self.current_term_id: Optional[str] = None
+        self._is_bubble: bool = False
+        self._saved_size: Optional[QSize] = None
         self._setup_ui()
     
     def _setup_ui(self):
@@ -86,6 +88,13 @@ class GlossaryPopup(QDialog):
         self.current_term_id = term_id
         self._search_query = search_query
         
+        # Auto-expand if currently minimized to bubble
+        if self._is_bubble:
+            self.setMinimumSize(350, 300)
+            self._is_bubble = False
+            if self._saved_size:
+                self.resize(self._saved_size)
+
         # Position popup near cursor and bring to top
         from aqt.qt import QCursor
         cursor_pos = QCursor.pos()
@@ -137,3 +146,29 @@ class GlossaryPopup(QDialog):
                 self.web_view.setHtml(html, QUrl.fromLocalFile(self._get_web_path()))
                 record_term_view(term_id)
                 self._apply_user_preferences(term_id)
+
+    def minimize_to_bubble(self):
+        """Collapse Glossary popup into a compact Messenger Bubble (60x60)."""
+        from .content_builder import build_bubble_html
+        self._is_bubble = True
+        self._saved_size = self.size()
+        self.resize(70, 70)
+        self.setMinimumSize(60, 60)
+        bubble_html = build_bubble_html(self._is_dark_mode())
+        self.web_view.setHtml(bubble_html, QUrl.fromLocalFile(self._get_web_path()))
+
+    def expand_from_bubble(self):
+        """Expand Messenger Bubble back to full Glossary window."""
+        self._is_bubble = False
+        self.setMinimumSize(350, 300)
+        if self._saved_size:
+            self.resize(self._saved_size)
+        else:
+            self.resize(500, 550)
+            
+        if self.current_term_id:
+            term_data = get_term_content(self.current_term_id)
+            if not term_data:
+                term_data = self._fetch_online_fallback(self.current_term_id)
+            html = build_popup_html(term_data, self._is_dark_mode())
+            self.web_view.setHtml(html, QUrl.fromLocalFile(self._get_web_path()))
