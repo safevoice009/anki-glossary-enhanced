@@ -6,6 +6,16 @@ Designed specifically for medical students and graduates preparing for USMLE, PL
 
 ---
 
+## 🙏 Credits, Attribution & Acknowledgments
+
+> **Open-Source Attribution & Credits Notice**
+> 
+> * **Original Concept & Base Code:** Created by **Ari Horesh** and the team at **[EnterMedSchool](https://entermedschool.com)** ([Original Repository](https://github.com/entermedschool/anki-glossary)).
+> * **Nature of this Project:** This project is an **Enhanced Community Fork & Open-Source Extension** of the original EnterMedSchool Glossary add-on. We are deeply grateful to Ari Horesh and EnterMedSchool for creating the original open-source knowledge archive.
+> * **Enhancements & Maintenance:** Maintained by **[safevoice009](https://github.com/safevoice009)** (`unboundapex1@gmail.com`) to add live Wikipedia Medical API lookup, universal double-click functionality, dynamic exam trap extraction, and movable window capabilities.
+
+---
+
 ## 🌟 Key Features
 
 * **🌐 Universal Double-Click Lookup**: Double-click ANY word or phrase on ANY card to fetch live medical summaries over the internet via the **Wikipedia Medical REST API**.
@@ -25,8 +35,9 @@ Designed specifically for medical students and graduates preparing for USMLE, PL
 
 ---
 
-## 👨‍⚕️ Author & License
+## 📜 License & Open Source
 
-* **Original Base:** EnterMedSchool Glossary by Ari Horesh.
-* **Enhanced Edition Maintainer:** [safevoice009](https://github.com/safevoice009) (unboundapex1@gmail.com).
-* **License:** Open Source (GPL-3.0 / MIT).
+This project is licensed under the open-source **GPL-3.0 License**, in compliance with the original EnterMedSchool Glossary open-source repository.
+
+* **Original Project:** [EnterMedSchool Glossary on GitHub](https://github.com/entermedschool/anki-glossary)
+* **EnterMedSchool Website:** [entermedschool.com](https://entermedschool.com)
