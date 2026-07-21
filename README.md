@@ -12,7 +12,7 @@
   <a href="https://apps.ankiweb.net"><img src="https://img.shields.io/badge/Anki-2.1%2B%20%7C%2023%2B%20%7C%2024%2B-6C5CE7?style=for-the-badge&logo=anki&logoColor=white" alt="Anki Compatibility"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-GPL--3.0-a29bfe?style=for-the-badge" alt="License"></a>
   <a href="https://github.com/safevoice009/anki-glossary-enhanced/releases"><img src="https://img.shields.io/badge/Version-v2.0.0--Enhanced-00b894?style=for-the-badge" alt="Release"></a>
-  <a href="https://entermedschool.com"><img src="https://img.shields.io/badge/EnterMedSchool-Official%20Theme-fd79a8?style=for-the-badge" alt="Theme"></a>
+  <a href="https://entermedschool.com"><img src="https://img.shields.io/badge/EnterMedSchool-Chunky%20Theme-fd79a8?style=for-the-badge" alt="Theme"></a>
 </p>
 
 </div>
@@ -33,11 +33,11 @@
 
 ```mermaid
 flowchart TD
-    classDef cardStyle fill:#6C5CE7,color:#ffffff,stroke:#7E22CE,stroke-width:2px;
-    classDef engineStyle fill:#7E22CE,color:#ffffff,stroke:#6C5CE7,stroke-width:2px;
-    classDef apiStyle fill:#00b894,color:#ffffff,stroke:#55efc4,stroke-width:2px;
-    classDef trapStyle fill:#fd79a8,color:#ffffff,stroke:#e84393,stroke-width:2px;
-    classDef windowStyle fill:#FFD93D,color:#1a1a2e,stroke:#FF9F43,stroke-width:2px;
+    classDef cardStyle fill:#6C5CE7,color:#ffffff,stroke:#1a1a2e,stroke-width:3px;
+    classDef engineStyle fill:#7E22CE,color:#ffffff,stroke:#1a1a2e,stroke-width:3px;
+    classDef apiStyle fill:#00b894,color:#ffffff,stroke:#1a1a2e,stroke-width:3px;
+    classDef trapStyle fill:#fd79a8,color:#ffffff,stroke:#1a1a2e,stroke-width:3px;
+    classDef windowStyle fill:#FFD93D,color:#1a1a2e,stroke:#1a1a2e,stroke-width:3px;
 
     A["🃏 Anki Flashcard Review\n(USMLE / PLAB / UPSC / Deck)"] ::: cardStyle -->|👆 Double-Click ANY Word| B["⚡ EnterMedSchool Event Listener"] ::: engineStyle
     
@@ -54,9 +54,9 @@ flowchart TD
 
 ---
 
-## 🎨 Theme & Aesthetic Features
+## 🎨 Chunky EnterMedSchool Aesthetic Features
 
-* **🌈 Official EnterMedSchool Palette**: Vibrant Purple (`#6C5CE7`), Coral (`#7E22CE`), Teal (`#00D9C0`), and Yellow (`#FFD93D`) accents.
+* **🌈 Official EnterMedSchool Chunky Theme**: Chunky black borders (`3px solid #1a1a2e`), drop shadows (`4px 4px 0 #1a1a2e`), and vibrant gradients matching `https://www.entermedschool.com/`.
 * **🌐 Universal Double-Click Lookup**: Double-click ANY word or phrase on ANY card to fetch live medical summaries over the internet via the **Wikipedia Medical REST API**.
 * **💡 High-Yield Exam Traps Engine**: Automatically synthesizes medical board exam traps, precautions, and mnemonics (e.g. *Folate masking B12*, *Milk-Alkali Syndrome*, *Iron toxicity*, *CAPTOPRIL*).
 * **🔤 Smart Suffix Auto-Matcher**: Matches singular terms to plural forms (`-s`, `-es`) and tenses (`-ed`, `-ing`) automatically.
@@ -73,7 +73,7 @@ flowchart TD
 | **🔤 Suffix Engine** | Strict exact match | **Smart Suffix Engine** (`-s`, `-es`, `-ed`, `-ing`) |
 | **🪟 Desktop Window** | Fixed frameless popup | **Movable Window** (`WindowStaysOnTopHint`) |
 | **👆 Trigger** | Pre-highlighted terms only | **Universal Double-Click** on any word on any card |
-| **🎨 Theme & Design** | Standard EnterMedSchool theme | **Upgraded EnterMedSchool Vibrant Theme** |
+| **🎨 Theme & Design** | Standard EnterMedSchool theme | **Chunky EnterMedSchool Website Theme** |
 
 ---
 
