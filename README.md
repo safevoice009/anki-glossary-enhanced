@@ -12,8 +12,8 @@ Designed specifically for medical students and doctors preparing for USMLE, PLAB
 > 
 > * **Original Concept & Base Code:** Created by **Ari Horesh** and the team at **[EnterMedSchool](https://entermedschool.com)** ([Original Repository](https://github.com/entermedschool/anki-glossary)).
 > * **Live Online Dictionary Data & API:** Powered by the open-access **[Wikimedia REST API](https://en.wikipedia.org/api/rest_v1/)** provided by the **Wikimedia Foundation** and Wikipedia contributors worldwide.
-> * **Integration & Enhanced Configuration:** Configured and maintained by **[safevoice009](https://github.com/safevoice009)** (`unboundapex1@gmail.com`) to integrate live Wikipedia API queries, universal double-click lookup, high-yield exam trap extraction, and movable window capabilities.
-> * **License:** Open Source (GPL-3.0). All credits for the base add-on belong to EnterMedSchool and for data to Wikimedia Foundation.
+> * **Integration & Enhanced Configuration:** Configured and maintained by **[safevoice009](https://github.com/safevoice009)** on GitHub to integrate live Wikipedia API queries, universal double-click lookup, high-yield exam trap extraction, and movable window capabilities.
+> * **License:** Open Source (GPL-3.0). All base code credits belong to EnterMedSchool, and data credits to Wikimedia Foundation.
 
 ---
 
@@ -42,4 +42,4 @@ This project is licensed under the open-source **GPL-3.0 License**, in complianc
 
 * **Original Project:** [EnterMedSchool Glossary on GitHub](https://github.com/entermedschool/anki-glossary)
 * **API Provider:** [Wikimedia REST API](https://en.wikipedia.org/api/rest_v1/)
-* **EnterMedSchool Website:** [entermedschool.com](https://entermedschool.com)
+* **Support & Issues:** [GitHub Issues](https://github.com/safevoice009/anki-glossary-enhanced/issues)
