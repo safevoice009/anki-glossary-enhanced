@@ -69,21 +69,8 @@ COLLAPSED_BY_DEFAULT = []
 
 
 def build_popup_html(term_data: dict, dark_mode: bool = False) -> str:
-    """
-    Build HTML for the popup window from term data.
-    
-    Args:
-        term_data: Dictionary containing term information
-        dark_mode: Whether to render in dark mode
-        
-    Returns:
-        Complete HTML string for the popup
-    """
+    """Build HTML for the popup window from term data."""
     level = term_data.get("level", "medschool")
-    
-    if level == "premed":
-        return build_premed_popup_html(term_data, dark_mode)
-    
     return build_medschool_popup_html(term_data, dark_mode)
 
 
@@ -358,7 +345,7 @@ def build_medschool_popup_html(term_data: dict, dark_mode: bool = False) -> str:
                     <span>A+</span>
                 </button>
                 <button class="ems-tool-btn ems-audio-btn" onclick="window.playTermAudio('{names[0]}')" title="Play Audio Pronunciation (🔊)">
-                    <span>🔊 Pronounce</span>
+                    <span>🔊 Audio</span>
                 </button>
                 <button class="ems-tool-btn" onclick="copyDefinition()" title="Copy definition (Ctrl+C)">
                     <span>📋</span>
@@ -402,8 +389,3 @@ def build_medschool_popup_html(term_data: dict, dark_mode: bool = False) -> str:
     </body>
     </html>
     '''
-
-
-def build_premed_popup_html(term_data: dict, dark_mode: bool = False) -> str:
-    """Build simplified popup HTML for pre-med level terms."""
-    return build_medschool_popup_html(term_data, dark_mode)
