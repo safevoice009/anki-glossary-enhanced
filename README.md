@@ -33,23 +33,25 @@
 
 ```mermaid
 flowchart TD
-    classDef cardStyle fill:#6C5CE7,color:#ffffff,stroke:#1a1a2e,stroke-width:3px;
-    classDef engineStyle fill:#7E22CE,color:#ffffff,stroke:#1a1a2e,stroke-width:3px;
-    classDef apiStyle fill:#00b894,color:#ffffff,stroke:#1a1a2e,stroke-width:3px;
-    classDef trapStyle fill:#fd79a8,color:#ffffff,stroke:#1a1a2e,stroke-width:3px;
-    classDef windowStyle fill:#FFD93D,color:#1a1a2e,stroke:#1a1a2e,stroke-width:3px;
-
-    A["🃏 Anki Flashcard Review\n(USMLE / PLAB / UPSC / Deck)"] ::: cardStyle -->|👆 Double-Click ANY Word| B["⚡ EnterMedSchool Event Listener"] ::: engineStyle
-    
-    B --> C{"🔍 Search Local Glossary DB?\n(564+ Terms & 2695 Patterns)"}
-    
-    C -->|✅ Term Found| D["📦 Load Local Offline Definition"] ::: engineStyle
-    C -->|🌐 Term Missing| E["🌐 Query Wikipedia Medical REST API\n(Real-Time Live Search)"] ::: apiStyle
-    
-    D --> F["💡 High-Yield Exam Traps & Mnemonics Engine"] ::: trapStyle
+    A["🃏 Anki Flashcard Review (USMLE / PLAB / UPSC)"] -->|Double-Click ANY Word| B["⚡ EnterMedSchool Event Listener"]
+    B --> C{"🔍 Search Local Glossary DB?"}
+    C -->|Term Found| D["📦 Load Local Offline Definition"]
+    C -->|Term Missing| E["🌐 Query Wikipedia Medical REST API"]
+    D --> F["💡 High-Yield Exam Traps & Mnemonics Engine"]
     E --> F
-    
-    F --> G["🪟 Render Movable Desktop Window\n(Pinned WindowStaysOnTopHint)"] ::: windowStyle
+    F --> G["🪟 Render Movable Desktop Window"]
+
+    classDef cardStyle fill:#6C5CE7,color:#ffffff,stroke:#1a1a2e,stroke-width:2px;
+    classDef engineStyle fill:#7E22CE,color:#ffffff,stroke:#1a1a2e,stroke-width:2px;
+    classDef apiStyle fill:#00b894,color:#ffffff,stroke:#1a1a2e,stroke-width:2px;
+    classDef trapStyle fill:#fd79a8,color:#ffffff,stroke:#1a1a2e,stroke-width:2px;
+    classDef windowStyle fill:#FFD93D,color:#1a1a2e,stroke:#1a1a2e,stroke-width:2px;
+
+    class A cardStyle;
+    class B,D engineStyle;
+    class E apiStyle;
+    class F trapStyle;
+    class G windowStyle;
 ```
 
 ---
