@@ -1,0 +1,18 @@
+/* EnterMedSchool Popup Audio Pronunciation Button Styling */
+.ems-audio-btn {
+    background: linear-gradient(135deg, #6C5CE7, #7E22CE) !important;
+    color: white !important;
+    border: 2px solid #1a1a2e !important;
+    font-weight: 700 !important;
+    padding: 3px 10px !important;
+    border-radius: 8px !important;
+    box-shadow: 2px 2px 0 #1a1a2e !important;
+    cursor: pointer !important;
+    transition: all 0.15s ease !important;
+}
+
+.ems-audio-btn:hover {
+    transform: translate(-1px, -1px) !important;
+    box-shadow: 3px 3px 0 #1a1a2e !important;
+    background: linear-gradient(135deg, #FD79A8, #6C5CE7) !important;
+}
