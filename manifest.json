@@ -1,10 +1,10 @@
 {
-  "name": "EnterMedSchool's Glossary (Enhanced Edition)",
+  "name": "Medical Terms Glossary & Instant Dictionary - EnterMedSchool Enhanced",
   "package": "entermedschool_glossary_enhanced",
   "version": "2.0.0",
   "author": "EnterMedSchool & Enhanced Edition (unboundapex1@gmail.com)",
   "homepage": "https://github.com/safevoice009/anki-glossary-enhanced",
-  "description": "Enhanced Medical Glossary with live Wikipedia Medical API fallback, universal double-click lookup, high-yield exam traps engine, and movable window.",
+  "description": "Instant Medical Terms Glossary & Medical Dictionary for Anki. Automatically highlights medical terms, live Wikipedia lookup on double-click, USMLE/PLAB/UPSC exam traps engine, and movable window.",
   "conflicts": [],
   "mod": 1767689108,
   "min_point_version": 50,
