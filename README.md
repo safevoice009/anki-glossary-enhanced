@@ -4,13 +4,20 @@
   <img src="docs/header_banner.svg" alt="EnterMedSchool Glossary Banner" width="100%">
 </p>
 
-<!-- EnterMedSchool Styled Badges -->
+<!-- AnkiWeb Direct Download & Code Box -->
 <p align="center">
-  <a href="https://apps.ankiweb.net"><img src="https://img.shields.io/badge/Anki-2.1%2B%20%7C%2023%2B%20%7C%2024%2B-6C5CE7?style=for-the-badge&logo=anki&logoColor=white" alt="Anki Compatibility"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/badge/License-GPL--3.0-a29bfe?style=for-the-badge" alt="License"></a>
-  <a href="https://github.com/safevoice009/anki-glossary-enhanced/releases"><img src="https://img.shields.io/badge/Version-v2.0.0--Enhanced-00b894?style=for-the-badge" alt="Release"></a>
-  <a href="https://entermedschool.com"><img src="https://img.shields.io/badge/EnterMedSchool-Chunky%20Theme-fd79a8?style=for-the-badge" alt="Theme"></a>
+  <a href="https://ankiweb.net/shared/info/625856715"><img src="https://img.shields.io/badge/AnkiWeb-625856715-6C5CE7?style=for-the-badge&logo=anki&logoColor=white" alt="AnkiWeb Download"></a>
+  <a href="https://ankiweb.net/shared/info/625856715"><img src="https://img.shields.io/badge/Download_on-AnkiWeb-00b894?style=for-the-badge&logo=ankiweb&logoColor=white" alt="AnkiWeb Link"></a>
+  <a href="https://github.com/safevoice009/anki-glossary-enhanced/releases"><img src="https://img.shields.io/badge/Version-v2.0.0--Enhanced-fd79a8?style=for-the-badge" alt="Release"></a>
 </p>
+
+### 📥 Instant Anki Installation Code
+```text
+625856715
+```
+*(Open Anki → Tools → Add-ons → Get Add-ons... and paste code **625856715**)*
+
+👉 **Official AnkiWeb Listing:** [https://ankiweb.net/shared/info/625856715](https://ankiweb.net/shared/info/625856715)
 
 </div>
 
@@ -66,12 +73,11 @@
 
 ---
 
-## 📥 Installation
+## 📥 Installation & AnkiWeb Listing
 
-1. Download **`Medical_Terms_Glossary_Instant_Dictionary_Enhanced.zip`**.
-2. Open Anki → **Tools > Add-ons > View Files**.
-3. Unzip the downloaded folder into your Anki add-ons directory.
-4. Restart Anki!
+* **AnkiWeb Listing:** [https://ankiweb.net/shared/info/625856715](https://ankiweb.net/shared/info/625856715)
+* **Anki Installation Code:** `625856715`
+* **Direct Zip Download:** Download **`Medical_Terms_Glossary_Instant_Dictionary_Enhanced.zip`**.
 
 ---
 
