@@ -73,6 +73,8 @@ SECTIONS = [
     ("images", "🖼️", "Images"),
 ]
 
+COLLAPSED_BY_DEFAULT = {"sources", "credits"}
+
 
 def build_images_html(images: list, title: str) -> str:
     """Build HTML for 🖼️ Clinical & Pathological Atlas section."""
