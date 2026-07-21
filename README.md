@@ -1,10 +1,7 @@
 <div align="center">
 
-# 🩺 EnterMedSchool Glossary — Enhanced Edition ⚡
-
 <p align="center">
-  <b>The Complete High-Yield Medical Dictionary Engine for Anki Desktop</b><br>
-  <i>Designed for Medical Students & Doctors Preparing for USMLE, PLAB, UPSC CMS, & Board Exams</i>
+  <img src="docs/header_banner.svg" alt="EnterMedSchool Glossary Banner" width="100%">
 </p>
 
 <!-- EnterMedSchool Styled Badges -->
@@ -31,28 +28,9 @@
 
 ## 🧠 System Architecture & Workflow Mindmap
 
-```mermaid
-flowchart TD
-    A["🃏 Anki Flashcard Review (USMLE / PLAB / UPSC)"] -->|Double-Click ANY Word| B["⚡ EnterMedSchool Event Listener"]
-    B --> C{"🔍 Search Local Glossary DB?"}
-    C -->|Term Found| D["📦 Load Local Offline Definition"]
-    C -->|Term Missing| E["🌐 Query Wikipedia Medical REST API"]
-    D --> F["💡 High-Yield Exam Traps & Mnemonics Engine"]
-    E --> F
-    F --> G["🪟 Render Movable Desktop Window"]
-
-    classDef cardStyle fill:#6C5CE7,color:#ffffff,stroke:#1a1a2e,stroke-width:2px;
-    classDef engineStyle fill:#7E22CE,color:#ffffff,stroke:#1a1a2e,stroke-width:2px;
-    classDef apiStyle fill:#00b894,color:#ffffff,stroke:#1a1a2e,stroke-width:2px;
-    classDef trapStyle fill:#fd79a8,color:#ffffff,stroke:#1a1a2e,stroke-width:2px;
-    classDef windowStyle fill:#FFD93D,color:#1a1a2e,stroke:#1a1a2e,stroke-width:2px;
-
-    class A cardStyle;
-    class B,D engineStyle;
-    class E apiStyle;
-    class F trapStyle;
-    class G windowStyle;
-```
+<p align="center">
+  <img src="docs/mindmap_diagram.svg" alt="System Architecture Mindmap Diagram" width="100%">
+</p>
 
 ---
 
@@ -80,16 +58,11 @@ flowchart TD
 
 ---
 
-## 📊 Feature Comparison Table
+## 📊 Feature Comparison Matrix
 
-| Component | Original EnterMedSchool Add-on | Enhanced Community Edition |
-| :--- | :--- | :--- |
-| **🌐 Medical Dictionary** | ~450 fixed local terms | **100% Unlimited** (Live Wikipedia Medical REST API Fallback) |
-| **💡 Exam Traps & Mnemonics** | Template placeholders | **Dynamic Exam Trap & Pearl Synthesizer** |
-| **🔤 Suffix Engine** | Strict exact match | **Smart Suffix Engine** (`-s`, `-es`, `-ed`, `-ing`) |
-| **🪟 Desktop Window** | Fixed frameless popup | **Movable Window** (`WindowStaysOnTopHint`) |
-| **👆 Trigger** | Pre-highlighted terms only | **Universal Double-Click** on any word on any card |
-| **🎨 Theme & Design** | Standard EnterMedSchool theme | **Chunky EnterMedSchool Website Theme** |
+<p align="center">
+  <img src="docs/feature_matrix.svg" alt="Feature Matrix Comparison Table" width="100%">
+</p>
 
 ---
 
