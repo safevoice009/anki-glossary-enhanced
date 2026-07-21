@@ -1,0 +1,18 @@
+{
+  "collapsed_sections": [
+    "sources",
+    "credits"
+  ],
+  "dark_mode": "light",
+  "enable_beta_features": true,
+  "enabled": true,
+  "first_launch_done": true,
+  "font_size_percent": 100,
+  "highlight_color": "#6C5CE7",
+  "highlight_style": "underline",
+  "onboarding_completed": true,
+  "popup_trigger": "both",
+  "preview_delay_ms": 300,
+  "show_preview_on_hover": true,
+  "user_level": "all"
+}

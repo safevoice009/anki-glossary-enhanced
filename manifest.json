@@ -1,0 +1,12 @@
+{
+  "name": "EnterMedSchool's Glossary (Enhanced Edition)",
+  "package": "entermedschool_glossary_enhanced",
+  "version": "2.0.0",
+  "author": "EnterMedSchool & Enhanced Edition (unboundapex1@gmail.com)",
+  "homepage": "https://github.com/safevoice009/anki-glossary-enhanced",
+  "description": "Enhanced Medical Glossary with live Wikipedia Medical API fallback, universal double-click lookup, high-yield exam traps engine, and movable window.",
+  "conflicts": [],
+  "mod": 1767689108,
+  "min_point_version": 50,
+  "max_point_version": 999
+}
